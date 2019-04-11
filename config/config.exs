@@ -52,7 +52,7 @@ config :nerves_firmware_ssh,
 
 # Setting the node_name will enable Erlang Distribution.
 # Only enable this for prod if you understand the risks.
-node_name = if Mix.env() != :prod, do: "hello_nerves"
+node_name = if Mix.env() != :prod, do: "night_vision"
 
 config :nerves_init_gadget,
   mdns_domain: "nerves.local",
@@ -65,6 +65,6 @@ config :nerves_init_gadget,
 # of this file so it overrides the configuration defined above.
 # Uncomment to use target specific configurations
 
-# import_config "#{Mix.target()}.exs"
+import_config "#{Mix.target()}.exs"
 
 config :night_vision, port: 4001

@@ -7,10 +7,11 @@ defmodule NightVision.Application do
     import Supervisor.Spec, warn: false
 
     port = Application.get_env(:night_vision, :port)
+    camera = Application.get_env(:picam, :camera, Picam.Camera)
 
     children = [
-      worker(Picam.Camera, []),
-      Plug.Cowboy.child_spec(scheme: :http, plug: NightVision.Router, options: [port: 4001])
+      worker(camera, []),
+      Plug.Cowboy.child_spec(scheme: :http, plug: NightVision.Router, options: [port: port])
     ]
 
     opts = [strategy: :one_for_one, name: NightVision.Supervisor]
