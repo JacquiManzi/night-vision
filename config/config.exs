@@ -67,4 +67,4 @@ config :nerves_init_gadget,
 
 # import_config "#{Mix.target()}.exs"
 
-config :picam_http, port: 4001
+config :night_vision, port: 4001

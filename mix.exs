@@ -1,11 +1,11 @@
-defmodule HelloNerves.MixProject do
+defmodule NightVision.MixProject do
   use Mix.Project
 
   @all_targets [:rpi, :rpi0, :rpi2, :rpi3, :rpi3a, :bbb, :x86_64]
 
   def project do
     [
-      app: :hello_nerves,
+      app: :night_vision,
       version: "0.1.0",
       elixir: "~> 1.8",
       archives: [nerves_bootstrap: "~> 1.5"],
@@ -26,7 +26,7 @@ defmodule HelloNerves.MixProject do
   # Run "mix help compile.app" to learn about applications.
   def application do
     [extra_applications: [:logger],
-     mod: {PicamHTTP.Application, []}]
+     mod: {NightVision.Application, []}]
   end
 
   # Run "mix help deps" to learn about dependencies.

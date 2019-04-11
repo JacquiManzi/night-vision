@@ -1,4 +1,4 @@
-defmodule PicamHTTP.Router do
+defmodule NightVision.Router do
   use Plug.Router
 
   plug :match
@@ -8,7 +8,7 @@ defmodule PicamHTTP.Router do
     markup = """
     <html>
     <head>
-      <title>Picam Video Stream</title>
+      <title>Video Stream/title>
     </head>
     <body>
       <img src="video.mjpg" />
@@ -20,7 +20,7 @@ defmodule PicamHTTP.Router do
     |> send_resp(200, markup)
   end
 
-  forward "/video.mjpg", to: PicamHTTP.Streamer
+  forward "/video.mjpg", to: NightVision.Streamer
 
   match _ do
     send_resp(conn, 404, "Oops. Try /")

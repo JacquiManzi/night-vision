@@ -1,11 +1,11 @@
-defmodule PicamHTTP.Streamer do
+defmodule NightVision.Streamer do
   @moduledoc """
   Plug for streaming an image
   """
   import Plug.Conn
 
   @behaviour Plug
-  @boundary "w58EW1cEpjzydSCq"
+  @boundary "night_vision"
 
   def init(opts), do: opts
 
