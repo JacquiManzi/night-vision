@@ -25,8 +25,7 @@ defmodule NightVision.MixProject do
 
   # Run "mix help compile.app" to learn about applications.
   def application do
-    [extra_applications: [:logger],
-     mod: {NightVision.Application, []}]
+    [extra_applications: [:logger], mod: {NightVision.Application, []}]
   end
 
   # Run "mix help deps" to learn about dependencies.
@@ -41,10 +40,11 @@ defmodule NightVision.MixProject do
       {:cowboy, "~> 1.0.0"},
       {:plug, "~> 1.0"},
       {:plug_cowboy, "~> 1.0"},
+      {:ex_image_info, "~> 0.2.4"},
 
       # Dependencies for all targets except :host
       {:nerves_runtime, "~> 0.6", targets: @all_targets},
-      {:nerves_init_gadget, "~> 0.4", targets: @all_targets},
+      # {:nerves_init_gadget, "~> 0.4", targets: @all_targets},
 
       # Dependencies for specific targets
       {:nerves_system_rpi, "~> 1.6", runtime: false, targets: :rpi},

@@ -25,8 +25,8 @@ end
 # when running `mix release`, the first release in the file
 # will be used by default
 
-release :hello_nerves do
-  set(version: current_version(:hello_nerves))
+release :night_vison do
+  set(version: current_version(:night_vison))
   set(strip_debug_info: true)
   plugin(Nerves)
   plugin(Shoehorn)

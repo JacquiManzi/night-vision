@@ -14,6 +14,9 @@ defmodule NightVision.Application do
       Plug.Cowboy.child_spec(scheme: :http, plug: NightVision.Router, options: [port: port])
     ]
 
+    NightVision.Motion.MotionDetection.detect_motion("gd.jpg")
+    |> Picam.FakeCamera.set_image()
+
     opts = [strategy: :one_for_one, name: NightVision.Supervisor]
     Supervisor.start_link(children, opts)
   end
