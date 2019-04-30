@@ -1,9 +1,9 @@
 defmodule NightVision.Motion.MotionDetection do
   import ExImageInfo
+  alias Porcelain.Result
 
   def detect_motion(image) do
-    image_binary = File.read!(image)
-    decompressed_image = File.read!("testy.bmp")
+    %Result{out: decompressed_image, status: status} = Porcelain.shell("djpeg -bmp #{image}")
 
     # @TODO: Remove this dependancy and just use the hex values for the width and height
     {_format, _width, height, _encode} = ExImageInfo.info(decompressed_image)
