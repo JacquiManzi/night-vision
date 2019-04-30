@@ -38,6 +38,7 @@
   "plug": {:hex, :plug, "1.8.0", "9d2685cb007fe5e28ed9ac27af2815bc262b7817a00929ac10f56f169f43b977", [:mix], [{:mime, "~> 1.0", [hex: :mime, repo: "hexpm", optional: false]}, {:plug_crypto, "~> 1.0", [hex: :plug_crypto, repo: "hexpm", optional: false]}, {:telemetry, "~> 0.4", [hex: :telemetry, repo: "hexpm", optional: true]}], "hexpm"},
   "plug_cowboy": {:hex, :plug_cowboy, "1.0.0", "2e2a7d3409746d335f451218b8bb0858301c3de6d668c3052716c909936eb57a", [:mix], [{:cowboy, "~> 1.0", [hex: :cowboy, repo: "hexpm", optional: false]}, {:plug, "~> 1.7", [hex: :plug, repo: "hexpm", optional: false]}], "hexpm"},
   "plug_crypto": {:hex, :plug_crypto, "1.0.0", "18e49317d3fa343f24620ed22795ec29d4a5e602d52d1513ccea0b07d8ea7d4d", [:mix], [], "hexpm"},
+  "porcelain": {:hex, :porcelain, "2.0.3", "2d77b17d1f21fed875b8c5ecba72a01533db2013bd2e5e62c6d286c029150fdc", [:mix], [], "hexpm"},
   "ranch": {:hex, :ranch, "1.7.1", "6b1fab51b49196860b733a49c07604465a47bdb78aa10c1c16a3d199f7f8c881", [:rebar3], [], "hexpm"},
   "ring_logger": {:hex, :ring_logger, "0.6.1", "568dbd9eebf26c661427de5204d8a91adaa740993f3ac5aa450257f62b6e7178", [:mix], [], "hexpm"},
   "shoehorn": {:hex, :shoehorn, "0.5.0", "da8e37dbee92454dd8e20c86953de94bdcaddb2dcda6c72cf4a3de5f52e0f322", [:mix], [{:distillery, "~> 2.0", [hex: :distillery, repo: "hexpm", optional: false]}], "hexpm"},

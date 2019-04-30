@@ -41,6 +41,7 @@ defmodule NightVision.MixProject do
       {:plug, "~> 1.0"},
       {:plug_cowboy, "~> 1.0"},
       {:ex_image_info, "~> 0.2.4"},
+      {:porcelain, "~> 2.0"},
 
       # Dependencies for all targets except :host
       {:nerves_runtime, "~> 0.6", targets: @all_targets},
