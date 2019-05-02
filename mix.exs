@@ -12,7 +12,8 @@ defmodule NightVision.MixProject do
       start_permanent: Mix.env() == :prod,
       build_embedded: true,
       aliases: [loadconfig: [&bootstrap/1]],
-      deps: deps()
+      deps: deps(),
+       compilers: [:elixir_make] ++ Mix.compilers,
     ]
   end
 
@@ -42,6 +43,7 @@ defmodule NightVision.MixProject do
       {:plug_cowboy, "~> 1.0"},
       {:ex_image_info, "~> 0.2.4"},
       {:porcelain, "~> 2.0"},
+      {:elixir_make, "~> 0.5.2", runtime: false},
 
       # Dependencies for all targets except :host
       {:nerves_runtime, "~> 0.6", targets: @all_targets},
