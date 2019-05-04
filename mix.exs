@@ -13,7 +13,7 @@ defmodule NightVision.MixProject do
       build_embedded: true,
       aliases: [loadconfig: [&bootstrap/1]],
       deps: deps(),
-       compilers: [:elixir_make] ++ Mix.compilers,
+      compilers: [:elixir_make] ++ Mix.compilers()
     ]
   end
 
