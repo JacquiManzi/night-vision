@@ -1,21 +1,26 @@
 defmodule NightVision.Motion.Worker do
   use GenServer
+  require Logger
 
-  def start_link(init_args) do
-    GenServer.start_link(__MODULE__, [init_args], MotionWorker)
+  def start_link() do
+    GenServer.start_link(__MODULE__, [{:working, false}, []])
   end
 
-  def init(%{working: working} = args) do
+  @impl true
+  def init([{:working, _working}, []] = args) do
     {:ok, args}
   end
 
   @impl true
-  def handle_cast(:detect_motion, image, %{working: working} = state) do
-    if working do
-      {:reply, state}
-    else
-      NightVision.Motion.MotionDetection.detect_motion(image)
-      {:reply, %{working: false}}
+  def handle_cast({:detect_motion, image}, [{:working, working}, _sections] = state) do
+    case working do
+      true ->
+        {:reply, state}
+
+      false ->
+        sections = NightVision.Motion.MotionDetection.detect_motion(image)
+        Logger.info(sections)
+        {:reply, [{:working, false}, sections]}
     end
   end
 end

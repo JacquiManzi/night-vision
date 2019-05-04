@@ -10,7 +10,7 @@ defmodule NightVision.Application do
     camera = Application.get_env(:picam, :camera, Picam.Camera)
 
     children = [
-      worker(NightVision.Motion.Worker, %{working: false}),
+      worker(NightVision.Motion.Worker, []),
       worker(camera, []),
       Plug.Cowboy.child_spec(scheme: :http, plug: NightVision.Router, options: [port: port])
     ]
