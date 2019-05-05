@@ -8,7 +8,7 @@ defmodule NightVision.Router do
     markup = """
     <html>
     <head>
-      <title>Video Stream/title>
+      <title>Video Stream</title>
     </head>
     <body>
       <img src="video.mjpg" />

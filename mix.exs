@@ -33,6 +33,7 @@ defmodule NightVision.MixProject do
   defp deps do
     [
       # Dependencies for all targets
+      {:distillery, "~> 2.0"},
       {:nerves, "~> 1.4", runtime: false},
       {:shoehorn, "~> 0.4"},
       {:ring_logger, "~> 0.6"},
@@ -47,7 +48,7 @@ defmodule NightVision.MixProject do
 
       # Dependencies for all targets except :host
       {:nerves_runtime, "~> 0.6", targets: @all_targets},
-      # {:nerves_init_gadget, "~> 0.4", targets: @all_targets},
+      {:nerves_init_gadget, "~> 0.4", targets: @all_targets},
 
       # Dependencies for specific targets
       {:nerves_system_rpi, "~> 1.6", runtime: false, targets: :rpi},

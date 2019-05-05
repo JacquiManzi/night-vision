@@ -1,5 +1,5 @@
 LDFLAGS ?=
 CFLAGS ?=
-CC ?= $(CROSSCOMPILE)-gcc	
+CC ?= $(CROSSCOMPILE)-gcc
 subsystem:
 		cd ./src/libjpeg && $(MAKE)
