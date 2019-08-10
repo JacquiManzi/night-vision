@@ -4,8 +4,6 @@
 ## What is this?
 Currently, it is a personal project for experimenting with the Raspberry-Pi, Picam, and infrared sensors. For now, it's a great learning tool for myself, but in the future I intend to make this into something more widely applicable for others.
 
-**TODO:** use erlang ports to interact with the jpeglib-progs library to decode and convert jpegs
-
 **TODO:** experiment with GenStages and multiple GenServers to split up work and keep individual state for motion tracking or other image processing tasks**
 
 ## Targets
